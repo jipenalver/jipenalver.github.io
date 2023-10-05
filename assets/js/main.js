@@ -88,7 +88,6 @@
           sections.forEach((item) => {
             item.classList.remove("section-show");
           });
-          document.querySelector(".social-links").style.marginTop = "40px";
           return;
         }
 
@@ -107,7 +106,6 @@
           section.classList.add("section-show");
         }
 
-        document.querySelector(".social-links").style.marginTop = "0px";
         scrollto(this.hash);
       }
     },
