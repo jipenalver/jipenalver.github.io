@@ -1,4 +1,0 @@
-body::before {
-    background: #040404 url("../img/another-bg.jpg") center  no-repeat !important;
-    background-size: cover !important;
-}
