@@ -156,7 +156,7 @@ h6 {
   left: 0;
   top: 0;
   right: 0;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.85);
 }
 
 #header.header-top .social-links,
@@ -363,7 +363,7 @@ section.section-show {
 }
 
 section .container {
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.65);
   padding: 30px;
 }
 
@@ -746,9 +746,15 @@ section .container {
 }
 
 .services .icon-box p {
+  text-align: justify;
   line-height: 24px;
   font-size: 14px;
   margin-bottom: 0;
+}
+
+.services .icon-box p::first-letter {
+  initial-letter: 2 2;
+  margin-right: 5px;
 }
 
 .services .icon-box:hover {
