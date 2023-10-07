@@ -19,6 +19,26 @@ body::before {
   top: 0;
   height: 100vh;
   z-index: -1;
+  -webkit-animation: grayish 5s ease-in-out infinite;
+  animation: grayish 5s ease-in-out infinite;
+}
+
+@keyframes grayish {
+  0% {
+    filter: grayscale(0%);
+  }
+  25% {
+    filter: grayscale(25%);
+  }
+  50% {
+    filter: grayscale(100%);
+  }
+  75% {
+    filter: grayscale(50%);
+  }
+  100% {
+    filter: grayscale(10%);
+  }
 }
 
 @media (min-width: 1024px) {
@@ -64,10 +84,10 @@ h6 {
   content: "";
   position: fixed;
   top: calc(42.5% - 0px);
-  left: calc(50% - 30px);
+  left: calc(48% - 30px);
   border: 10px solid #ffffff;
-  border-top-color: var(--bs-dark);
-  border-bottom-color: var(--bs-dark);
+  border-top-color: #18d26e;
+  border-bottom-color: #18d26e;
   border-radius: 50%;
   width: 100px;
   height: 100px;
