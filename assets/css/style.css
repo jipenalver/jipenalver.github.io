@@ -25,19 +25,19 @@ body::before {
 
 @keyframes grayish {
   0% {
-    filter: grayscale(0%);
+    filter: grayscale(100%);
   }
   25% {
-    filter: grayscale(25%);
+    filter: grayscale(75%);
   }
   50% {
-    filter: grayscale(100%);
+    filter: grayscale(0%);
   }
   75% {
     filter: grayscale(50%);
   }
   100% {
-    filter: grayscale(10%);
+    filter: grayscale(90%);
   }
 }
 
