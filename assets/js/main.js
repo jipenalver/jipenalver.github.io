@@ -57,7 +57,7 @@
   });
 
   /**
-   * Scrool with ofset on links with a class name .scrollto
+   * Scroll with offset on links with a class name .scrollto
    */
   on(
     "click",
@@ -160,6 +160,12 @@
       },
     });
   }
+
+  /**
+   * Parallax Effect
+   */
+  new Parallax(document.querySelector("#header .container h1"));
+  new Parallax(document.querySelector("#profile"));
 
   /**
    * Testimonials slider
