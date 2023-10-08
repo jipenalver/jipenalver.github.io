@@ -6,7 +6,7 @@ body {
   background-color: #040404;
   color: #fff;
   position: relative;
-  background: transparent;
+  /* background: transparent; */
 }
 
 body::before {
@@ -19,24 +19,29 @@ body::before {
   top: 0;
   height: 100vh;
   z-index: -1;
-  -webkit-animation: grayish 5s ease-in-out infinite;
-  animation: grayish 5s ease-in-out infinite;
+  -webkit-animation: animate-bg 5s ease-in-out infinite;
+  animation: animate-bg 5s ease-in-out infinite;
 }
 
-@keyframes grayish {
+@keyframes animate-bg {
   0% {
+    transform: translateY(0);
     filter: grayscale(100%);
   }
   25% {
+    transform: translateY(-10px);
     filter: grayscale(75%);
   }
   50% {
+    transform: translateY(-5px);
     filter: grayscale(0%);
   }
   75% {
+    transform: translateY(5px);
     filter: grayscale(50%);
   }
   100% {
+    transform: translateY(0px);
     filter: grayscale(90%);
   }
 }
@@ -77,22 +82,28 @@ h6 {
   bottom: 0;
   z-index: 9999;
   overflow: hidden;
-  background: rgba(0, 0, 0, 0.95);
+  background: rgba(16, 16, 16, 0.98);
 }
 
-#preloader:before {
-  content: "";
-  position: fixed;
-  top: calc(42.5% - 0px);
-  left: calc(48% - 30px);
-  border: 10px solid #ffffff;
-  border-top-color: #18d26e;
-  border-bottom-color: #18d26e;
-  border-radius: 50%;
-  width: 100px;
+#preloader span {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   height: 100px;
+  width: 100px;
+  margin: auto;
+  border-radius: 50%;
+  border: 8px solid #f3f3f3;
+  border-top: 8px solid #18d26e;
+  border-bottom: 8px solid #18d26e;
   -webkit-animation: animate-preloader 2s linear infinite;
   animation: animate-preloader 2s linear infinite;
+}
+
+#preloader span img {
+  width: 100%;
 }
 
 @keyframes animate-preloader {
