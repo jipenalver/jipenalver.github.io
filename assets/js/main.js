@@ -2,15 +2,6 @@
   "use strict";
 
   /**
-   * Preloader
-   */
-  const removePreloader = () => preloader.remove();
-  let preloader = document.querySelector("#preloader");
-  if (preloader) {
-    window.addEventListener("load", () => setTimeout(removePreloader, 500));
-  }
-
-  /**
    * Easy selector helper function
    */
   const select = (el, all = false) => {
@@ -46,6 +37,31 @@
       behavior: "smooth",
     });
   };
+
+  /**
+   * Preloader
+   */
+  const removePreloader = () => preloader.remove();
+  let preloader = select("#preloader");
+  if (preloader) {
+    window.addEventListener("load", () => setTimeout(removePreloader, 500));
+  }
+
+  /**
+   * Intro type effect
+   */
+  const typed = select(".typed");
+  if (typed) {
+    let typed_strings = typed.getAttribute("data-typed-items");
+    typed_strings = typed_strings.split(",");
+    new Typed(".typed", {
+      strings: typed_strings,
+      loop: true,
+      typeSpeed: 100,
+      backSpeed: 50,
+      backDelay: 2000,
+    });
+  }
 
   /**
    * Mobile nav toggle
@@ -164,8 +180,8 @@
   /**
    * Parallax Effect
    */
-  new Parallax(document.querySelector("#header .container h1"));
-  new Parallax(document.querySelector("#profile"));
+  new Parallax(select("#header .container h1"));
+  new Parallax(select("#profile"));
 
   /**
    * Testimonials slider
