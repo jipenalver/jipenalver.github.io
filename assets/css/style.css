@@ -406,14 +406,17 @@ section {
 }
 
 section.section-show {
-  top: 100px;
+  top: 80px;
   bottom: auto;
   opacity: 1;
-  padding-bottom: 45px;
+  padding-bottom: 0px;
+}
+
+section .container-fluid {
+  background: rgba(0, 0, 0, 0.65);
 }
 
 section .container {
-  background: rgba(0, 0, 0, 0.65);
   padding: 30px;
 }
 
@@ -423,7 +426,7 @@ section .container {
   }
 
   section.section-show {
-    top: 80px;
+    top: 60px;
   }
 }
 
