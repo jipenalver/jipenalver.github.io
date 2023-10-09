@@ -283,7 +283,6 @@ h6 {
   background: rgba(0, 0, 0, 0.85);
 }
 
-#header.header-top .social-links,
 #header.header-top h2 {
   display: none;
 }
@@ -305,6 +304,12 @@ h6 {
 
 #header.header-top .navbar {
   margin: 0;
+}
+
+@media (max-width: 992px) {
+  #header.header-top .social-links {
+    display: none;
+  }
 }
 
 @media (max-width: 768px) {
