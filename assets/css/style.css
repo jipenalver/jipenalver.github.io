@@ -72,46 +72,109 @@ h6 {
 }
 
 /*--------------------------------------------------------------
-# Pre-Loader
+# Preloader
 --------------------------------------------------------------*/
 #preloader {
+  display: flex;
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 9999;
-  overflow: hidden;
-  background: rgba(16, 16, 16, 0.98);
-}
-
-#preloader span {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  height: 100px;
-  width: 100px;
-  margin: auto;
-  border-radius: 50%;
-  border: 8px solid #f3f3f3;
-  border-top: 8px solid #18d26e;
-  border-bottom: 8px solid #18d26e;
-  -webkit-animation: animate-preloader 2s linear infinite;
-  animation: animate-preloader 2s linear infinite;
-}
-
-#preloader span img {
+  inset: 0;
   width: 100%;
+  height: 100vh;
+  z-index: 99999;
 }
 
-@keyframes animate-preloader {
+#preloader:before,
+#preloader:after {
+  content: "";
+  background-color: #040404;
+  position: absolute;
+  inset: 0;
+  width: 50%;
+  height: 100%;
+  transition: all 0.3s ease 0s;
+  z-index: -1;
+}
+
+#preloader:after {
+  left: auto;
+  right: 0;
+}
+
+#preloader .line {
+  position: relative;
+  overflow: hidden;
+  margin: auto;
+  width: 1px;
+  height: 280px;
+  transition: all 0.8s ease 0s;
+}
+
+#preloader .line:before {
+  content: "";
+  position: absolute;
+  background-color: #fff;
+  left: 0;
+  top: 50%;
+  width: 1px;
+  height: 0%;
+  transform: translateY(-50%);
+  animation: lineincrease 1000ms ease-in-out 0s forwards;
+}
+
+#preloader .line:after {
+  content: "";
+  position: absolute;
+  background-color: #999;
+  left: 0;
+  top: 0;
+  width: 1px;
+  height: 100%;
+  transform: translateY(-100%);
+  animation: linemove 1200ms linear 0s infinite;
+  animation-delay: 2000ms;
+}
+
+#preloader.loaded .line {
+  opacity: 0;
+  height: 100% !important;
+}
+
+#preloader.loaded .line:after {
+  opacity: 0;
+}
+
+#preloader.loaded:before,
+#preloader.loaded:after {
+  animation: preloaderfinish 300ms ease-in-out 500ms forwards;
+}
+
+@keyframes lineincrease {
   0% {
-    transform: rotate(0deg);
+    height: 0%;
   }
+
   100% {
-    transform: rotate(360deg);
+    height: 100%;
+  }
+}
+
+@keyframes linemove {
+  0% {
+    transform: translateY(200%);
+  }
+
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+@keyframes preloaderfinish {
+  0% {
+    width: 5 0%;
+  }
+
+  100% {
+    width: 0%;
   }
 }
 
@@ -1076,6 +1139,17 @@ section .container {
 /*--------------------------------------------------------------
 # Contact
 --------------------------------------------------------------*/
+.contact img {
+  width: 70%;
+  opacity: 0.8;
+  cursor: pointer;
+  filter: blur(2px);
+}
+
+.contact img:hover {
+  filter: blur(0px);
+}
+
 .contact .info-box {
   color: #444444;
   padding: 20px;

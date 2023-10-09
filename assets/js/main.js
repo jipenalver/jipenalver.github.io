@@ -41,10 +41,16 @@
   /**
    * Preloader
    */
-  const removePreloader = () => preloader.remove();
-  let preloader = select("#preloader");
+  const preloader = select("#preloader");
   if (preloader) {
-    window.addEventListener("load", () => setTimeout(removePreloader, 500));
+    window.addEventListener("load", () => {
+      setTimeout(() => {
+        preloader.classList.add("loaded");
+      }, 2000);
+      setTimeout(() => {
+        preloader.remove();
+      }, 3000);
+    });
   }
 
   /**
