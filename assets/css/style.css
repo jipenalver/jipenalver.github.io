@@ -493,6 +493,7 @@ section.section-show {
 
 section .container-fluid {
   background: rgba(0, 0, 0, 0.65);
+  min-height: 100vh;
 }
 
 section .container {
@@ -1184,6 +1185,10 @@ section .container {
   line-height: 24px;
   font-size: 14px;
   margin: 0 0 0 68px;
+}
+
+.contact .info-box a p:hover {
+  color: #18d26e;
 }
 
 .contact .info-box .social-links {
