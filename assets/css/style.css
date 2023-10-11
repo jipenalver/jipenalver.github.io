@@ -1262,14 +1262,17 @@ section .container {
 @media (max-width: 992px) {
   .credits {
     padding: 10px;
+    background-color: rgb(0, 0, 0, 0.85);
   }
 }
 
-.credits a {
-  color: #18d26e;
+.credits img {
   transition: 0.3s;
+  animation: credits-img 5s infinite;
 }
 
-.credits a:hover {
-  color: #fff;
+@keyframes credits-img {
+  50% {
+    transform: rotateY(180deg);
+  }
 }
