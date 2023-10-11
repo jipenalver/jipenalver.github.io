@@ -6,7 +6,6 @@ body {
   background-color: #040404;
   color: #fff;
   position: relative;
-  /* background: transparent; */
 }
 
 body::before {
@@ -451,7 +450,6 @@ h6 {
   padding: 10px 0;
   overflow-y: auto;
   transition: 0.3s;
-  /* border: 2px solid rgba(255, 255, 255, 0.5); */
 }
 
 .navbar-mobile li {

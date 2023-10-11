@@ -186,6 +186,12 @@
   });
 
   /**
+   * Parallax Effect
+   */
+  new Parallax(select("#header .container h1"));
+  new Parallax(select("#profile"));
+
+  /**
    * Skills animation
    */
   let skilsContent = select(".skills-content");
@@ -201,12 +207,6 @@
       },
     });
   }
-
-  /**
-   * Parallax Effect
-   */
-  new Parallax(select("#header .container h1"));
-  new Parallax(select("#profile"));
 
   /**
    * Testimonials slider
