@@ -124,7 +124,10 @@
             item.classList.remove("section-show");
           });
 
-          select("#header h1 span").innerHTML = "Jabez Ian Chris Penalver";
+          select("#header h1 span:nth-child(1)").innerHTML =
+            "Jabez Ian Chris D. Penalver";
+          select("#header h1 span:nth-child(2)").innerHTML =
+            "Jabez Ian Chris D. Penalver";
           select("#header .social-links").style.marginTop = "40px";
           select("#header .social-links").style.marginLeft = "0px";
           return;
@@ -147,7 +150,8 @@
 
         scrollto(this.hash);
 
-        select("#header h1 span").innerHTML = "Ian Penalver";
+        select("#header h1 span:nth-child(1)").innerHTML = "Ian Penalver";
+        select("#header h1 span:nth-child(2)").innerHTML = "Ian Penalver";
         select("#header .social-links").style.marginTop = "0px";
         select("#header .social-links").style.marginLeft = "20px";
       }
