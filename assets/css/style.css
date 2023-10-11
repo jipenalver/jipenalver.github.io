@@ -1254,7 +1254,6 @@ section .container {
   left: 0;
   bottom: 0;
   padding: 15px;
-  text-align: right;
   font-size: 13px;
   color: #fff;
   z-index: 999999;
@@ -1262,7 +1261,6 @@ section .container {
 
 @media (max-width: 992px) {
   .credits {
-    text-align: center;
     padding: 10px;
   }
 }
