@@ -209,11 +209,11 @@ h6 {
 
 #header h1 span:nth-child(1) {
   color: transparent;
-  -webkit-text-stroke: 2px #fff;
+  -webkit-text-stroke: 2px #18d26e;
 }
 
 #header h1 span:nth-child(2) {
-  color: #fff;
+  color: #18d26e;
   animation: animate-h1 3s ease-in-out infinite;
 }
 
@@ -608,6 +608,15 @@ section .container {
   line-height: 0;
 }
 
+.about-me .content .stack-box {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.about-me .content .stack-box:hover {
+  transform: translateY(-5px);
+}
+
 .about-me .content p:last-child {
   margin-bottom: 0;
 }
@@ -955,6 +964,14 @@ section .container {
   margin-bottom: 30px;
 }
 
+.portfolio .portfolio-item img {
+  cursor: pointer;
+}
+
+.portfolio .portfolio-item img:hover {
+  transform: translateY(-10px);
+}
+
 .portfolio #portfolio-flters {
   padding: 0;
   margin: 0 auto 15px auto;
@@ -1104,78 +1121,6 @@ section .container {
 .portfolio .portfolio-wrap:hover .portfolio-info::after {
   bottom: 15px;
   right: 15px;
-}
-
-/*--------------------------------------------------------------
-# Portfolio Details
---------------------------------------------------------------*/
-.portfolio-details {
-  padding-top: 40px;
-  background: rgba(0, 0, 0, 0.8);
-  position: fixed;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  overflow-y: auto;
-}
-
-.portfolio-details .container {
-  padding-top: 20px;
-  padding-bottom: 40px;
-}
-
-.portfolio-details .portfolio-title {
-  font-size: 26px;
-  font-weight: 700;
-  margin-bottom: 20px;
-}
-
-.portfolio-details .portfolio-info {
-  padding-top: 45px;
-}
-
-.portfolio-details .portfolio-info h3 {
-  font-size: 22px;
-  font-weight: 400;
-  margin-bottom: 20px;
-}
-
-.portfolio-details .portfolio-info ul {
-  list-style: none;
-  padding: 0;
-  font-size: 15px;
-}
-
-.portfolio-details .portfolio-info ul li + li {
-  margin-top: 10px;
-}
-
-.portfolio-details .portfolio-info p {
-  font-size: 15px;
-  padding: 15px 0 0 0;
-}
-
-@media (max-width: 992px) {
-  .portfolio-details .portfolio-info {
-    padding-top: 20px;
-  }
-}
-
-.portfolio-details .swiper-pagination {
-  margin-top: 20px;
-  position: relative;
-}
-
-.portfolio-details .swiper-pagination .swiper-pagination-bullet {
-  width: 12px;
-  height: 12px;
-  opacity: 1;
-  background-color: rgba(255, 255, 255, 0.3);
-}
-
-.portfolio-details .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: #18d26e;
 }
 
 /*--------------------------------------------------------------
