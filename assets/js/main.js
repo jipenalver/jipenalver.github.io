@@ -70,6 +70,13 @@
     new Typed(".about-me .typed", typedConfig(typed_strings));
   }
 
+  const nickname_typed = select(".nickname .typed");
+  if (nickname_typed) {
+    let typed_strings = nickname_typed.getAttribute("data-typed-items");
+    typed_strings = typed_strings.split(",");
+    new Typed(".nickname .typed", typedConfig(typed_strings));
+  }
+
   function typedConfig(typed_strings) {
     return {
       strings: typed_strings,
