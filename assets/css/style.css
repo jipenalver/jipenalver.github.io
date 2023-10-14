@@ -216,6 +216,7 @@ h6 {
 }
 
 #header h1 span:nth-child(2) {
+  opacity: 0.65;
   color: #18d26e;
   animation: animate-h1 3s ease-in-out infinite;
 }
@@ -586,6 +587,50 @@ section .container {
 /*--------------------------------------------------------------
 # About
 --------------------------------------------------------------*/
+.about-me #profile {
+  cursor: pointer;
+  border-radius: 50%;
+  border: #040404 5px solid;
+  animation: animate-profile 10s ease-in-out infinite;
+}
+
+.about-me #profile:hover {
+  transform: translateY(-5px);
+}
+
+@keyframes animate-profile {
+  0% {
+    border-top-left-radius: 50%;
+    border-top-right-radius: 47%;
+    border-bottom-left-radius: 45%;
+    border-bottom-left-radius: 42%;
+  }
+  25% {
+    border-top-left-radius: 47%;
+    border-top-right-radius: 45%;
+    border-bottom-left-radius: 42%;
+    border-bottom-left-radius: 50%;
+  }
+  50% {
+    border-top-left-radius: 45%;
+    border-top-right-radius: 42%;
+    border-bottom-left-radius: 50%;
+    border-bottom-left-radius: 47%;
+  }
+  75% {
+    border-top-left-radius: 42%;
+    border-top-right-radius: 50%;
+    border-bottom-left-radius: 47%;
+    border-bottom-left-radius: 45%;
+  }
+  100% {
+    border-top-left-radius: 50%;
+    border-top-right-radius: 47%;
+    border-bottom-left-radius: 45%;
+    border-bottom-left-radius: 42%;
+  }
+}
+
 .about-me .content h3 {
   font-weight: 700;
   font-size: 26px;
