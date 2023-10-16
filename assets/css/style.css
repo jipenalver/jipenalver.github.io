@@ -199,7 +199,7 @@ h6 {
   margin: 0;
   padding: 0;
   line-height: 1;
-  text-align: center;
+  text-align: right;
   font-weight: 700;
   font-family: "Poppins", sans-serif;
 }
@@ -213,7 +213,7 @@ h6 {
 }
 
 #header h2 {
-  text-align: center;
+  text-align: right;
   font-size: 26px;
   margin-top: 20px;
   color: rgba(255, 255, 255, 0.8);
@@ -233,7 +233,7 @@ h6 {
 
 #header .social-links {
   display: flex;
-  justify-content: center;
+  justify-content: end;
   margin-top: 40px;
 }
 
@@ -399,6 +399,11 @@ h6 {
 .navbar .active:focus,
 .navbar li:hover > a {
   color: #fff;
+}
+
+.navbar a#link-hire {
+  color: #18d26e;
+  font-weight: bold;
 }
 
 /**
