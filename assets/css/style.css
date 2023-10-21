@@ -226,6 +226,21 @@ h6 {
   padding-bottom: 6px;
 }
 
+#header h2 span::before {
+  content: "Full Stack Developer";
+  animation: h2-span 3s linear infinite;
+}
+
+@keyframes h2-span {
+  0% {
+  }
+  50% {
+    content: "University Instructor";
+  }
+  100% {
+  }
+}
+
 #header img {
   padding: 0;
   margin: 0;
@@ -1118,6 +1133,8 @@ section .container {
 # Credits
 --------------------------------------------------------------*/
 .credits {
+  display: flex;
+  justify-content: end;
   position: fixed;
   right: 0;
   left: 0;
@@ -1130,6 +1147,7 @@ section .container {
 
 @media (max-width: 992px) {
   .credits {
+    justify-content: center;
     padding: 10px;
     background-color: rgb(0, 0, 0, 0.85);
   }

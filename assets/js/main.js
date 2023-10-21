@@ -56,13 +56,6 @@
   /**
    * Intro type effect
    */
-  const typed = select(".typed");
-  if (typed) {
-    let typed_strings = typed.getAttribute("data-typed-items");
-    typed_strings = typed_strings.split(",");
-    new Typed(".typed", typedConfig(typed_strings));
-  }
-
   const about_typed = select(".about-me .typed");
   if (about_typed) {
     let typed_strings = about_typed.getAttribute("data-typed-items");
