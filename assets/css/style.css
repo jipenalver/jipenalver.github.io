@@ -228,13 +228,18 @@ h6 {
 
 #header h2 span::before {
   content: "Full Stack Developer";
-  animation: h2-span 3s linear infinite;
+  animation: h2-span 6s linear infinite;
 }
 
 @keyframes h2-span {
   0% {
   }
+  25% {
+    content: "Mobile App Developer";
+  }
   50% {
+  }
+  75% {
     content: "University Instructor";
   }
   100% {
